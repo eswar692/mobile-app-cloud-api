@@ -1,7 +1,9 @@
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"
-import Src from "./src/src"
 import Toast from "react-native-toast-message"
 import toastConfig from "./src/config/toast/toast"
+import { Provider } from "react-redux"
+import { store } from "./src/redux/Store"
+import Main from "./src/Main"
 
 
 
@@ -9,8 +11,10 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1}}>
-        <Src />
-        <Toast config={toastConfig}/>
+        <Provider store={store}>
+          <Main />
+        </Provider>
+        <Toast config={toastConfig}/>  
       </SafeAreaView>
     </SafeAreaProvider>
   )

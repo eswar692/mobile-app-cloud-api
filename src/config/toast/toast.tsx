@@ -9,10 +9,10 @@ const toastConfig = {
   
     
   success:({ text1}:any) => (
-    <View style={{ height: 60, width: '80%', backgroundColor: 'green', borderLeftWidth: 5, borderLeftColor: 'white' }}>
+    <View style={{ display: 'flex', flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', height: 60, width: '80%', backgroundColor: 'green', borderLeftWidth: 5, borderLeftColor: 'pink', paddingHorizontal: 15 }}>
       <Text>{text1}</Text>
       <TouchableOpacity onPress={() => Toast.hide()}>
-        <Icon name="home" size={30}  />
+        <Icon name="doubleleft" size={30}  />
       </TouchableOpacity>
     </View>
   ),
@@ -20,7 +20,7 @@ const toastConfig = {
     <View style={{ height: 60, width: '100%', backgroundColor: 'red',}}>
       <Text>{text1}</Text>
       <TouchableOpacity onPress={() => Toast.hide()}>
-        <Icon name="times" size={30}  />
+        <Icon name="close" size={30}  />
       </TouchableOpacity>
     </View>
   ) ,

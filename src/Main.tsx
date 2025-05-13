@@ -6,7 +6,7 @@ import Contact from './screen/contact/Contact';
 
 const Stack = createNativeStackNavigator();
 
-const MyStack = () => {
+const Main = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
@@ -21,3 +21,4 @@ const MyStack = () => {
     </NavigationContainer>
   );
 };
+export default Main;
